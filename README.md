@@ -94,15 +94,15 @@ ___
 Include within your minetest.conf:
 
 ```conf
-secure.http_mods = apachetest
+secure.http_mods = httptest
 apache2_url = http://127.0.0.1:80/index.lua
 ```
 
 ___
 
-### apachetest
+### httptest
 
-Add apachetest folder to your mods or worldmods folder, start Minetest server.
+Add httptest folder to your mods or worldmods folder, start Minetest server.
 
 The chatcommand `/apache [text]` sends an HTTP request to Apache httpd, and the reply is presented on-screen in formspec:
 

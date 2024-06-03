@@ -1,9 +1,9 @@
-  --==[[ Apachetest  0.0.1 ]]==--
+  --==[[  HTTPTest  0.0.1  ]]==--
   --==[[ MIT (c) 2024 monk ]]==--
 local http = minetest.request_http_api()
 
 if not http then
-  return minetest.log("error", "[Apachetest] HTTP api inaccessible. Please check your minetest.conf")
+  return minetest.log("error", "[HTTPTest] HTTP api inaccessible. Please check your minetest.conf")
 end
 
 local apache2_url = minetest.settings:get("apache2_url") or "http://127.0.0.1:80/index.lua"
@@ -39,7 +39,7 @@ local function call_apache(name, param)
           response_data[#response_data+1] = "<style color=#0b9ad8 font=mono size=10px>"..tostring(field_content).."</style>\n"
         end
         form = form.."hypertext[0,0;15,11;;<b><mono>"..table.concat(response_data).."</mono></b>" .. "]"
-      return minetest.show_formspec(name, "apachetest:response", form)
+      return minetest.show_formspec(name, "httptest:response", form)
     end
   )
 end

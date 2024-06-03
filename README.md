@@ -1,15 +1,15 @@
-Apachetest
-----------
+HTTPTEST
+--------
 
-A bridge between Minetest and Apache2.
+A Generic HTTP-based IPC bridge for Minetest.
 
 MIT (c) 2024 monk
 
+> The HTTP server and language used server-side in this document is for Apache2's mod_lua. It can be switched out for any other setup.
+
 ___
 
-Requires Apache httpd version 2.3 or later.
-
-It is highly recommend to use latest version with patch, which added support for Lua 5.4, and contains rather important [Security patches](https://downloads.apache.org/httpd/CHANGES_2.4).
+For Apache httpd version 2.3 or later. It is highly recommend to use latest version with patch, which added support for Lua 5.4, and contains rather important [Security patches](https://downloads.apache.org/httpd/CHANGES_2.4).
 
  > [!WARNING]
  > It is not recommended that you use this module on a server that is shared with users you do not trust, as it can be abused to change the internal workings of httpd.
